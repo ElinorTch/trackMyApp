@@ -17,5 +17,6 @@
     "16": "images/application-16.png",
     "32": "images/application-32.png",
     "128": "images/application-128.png"
-  }
+  },
+  "permissions": ["tabs", "activeTab"]
 }
