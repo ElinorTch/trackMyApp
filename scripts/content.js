@@ -1,4 +1,8 @@
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log("Message received:", message);
-  sendResponse({ success: true, company: "Elinor" });
+(() => {
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    const { type, jobId } = message;
+
+    if (type === "job") {
+    }
+  })
 });
