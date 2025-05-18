@@ -1,3 +1,4 @@
 export function scrapeLinkedIn() {
-  console.log("Scraping LinkedIn");
+  const companyElement = document.querySelector('div');
+  console.log(companyElement);
 }
