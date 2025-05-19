@@ -13,6 +13,10 @@
       "matches": ["https://*.linkedin.com/jobs/*"]
     }
   ],
+  "oauth2": {
+    "client_id": "847763334252-cigeebbv8sudjd070lv70kla9n6a4g3k.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/spreadsheets.readonly"]
+  },
   "background": {
     "service_worker": "background/background.js"
   },
@@ -21,6 +25,13 @@
     "32": "images/application-32.png",
     "128": "images/application-128.png"
   },
-  "host_permissions": ["https://www.linkedin.com/jobs/*"],
-  "permissions": ["scripting", "tabs", "activeTab"]
+  "host_permissions": [
+    "https://www.linkedin.com/jobs/*",
+    "https://www.googleapis.com/*",
+    "https://accounts.google.com/*"
+  ],
+  "permissions": ["scripting", "tabs", "activeTab", "identity"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
 }
