@@ -31,3 +31,5 @@ const getLinkedinJobDetails = (jobId, jobURL) => {
     lastUpdated,
   };
 };
+
+const saveJobToDatabase = (jobInfo) => {};
