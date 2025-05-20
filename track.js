@@ -1,18 +1,17 @@
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-  if (msg.type === "OPEN_AUTH") {
-    chrome.tabs.create({ url: "https://oauth.html" });
+window.onload = function () {
+  if (localStorage.getItem("accessToken")) {
+    document.getElementById('signin-button').style.display = 'none';
+    document.getElementById('signout-button').style.display = 'block';
+    document.getElementById('signout-button').addEventListener('click', function () {
+      localStorage.removeItem("accessToken");
+    });
+  } else {
+    document.getElementById('signin-button').style.display = 'block';
+    document.getElementById('signout-button').style.display = 'none';
+    document.getElementById('signin-button').addEventListener('click', function () {
+      chrome.identity.getAuthToken({ interactive: true }, function (token) {
+        localStorage.setItem("accessToken", token);
+      });
+    });
   }
-});
-
-const loadDataButton = document.getElementById("loadData");
-const output = document.getElementById("output");
-
-loadDataButton.addEventListener("click", () => {
-  chrome.runtime.sendMessage({ action: "getSheetData" }, (response) => {
-    if (response.success) {
-      output.textContent = JSON.stringify(response.data, null, 2);
-    } else {
-      output.textContent = "Error: " + response.error;
-    }
-  });
-});
+};
