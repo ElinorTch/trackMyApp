@@ -2,7 +2,12 @@
   "manifest_version": 3,
   "name": "Track my application",
   "version": "1.0.0",
-  "description": "Track My Application allows users to update the status of each job they've applied to (e.g., Applied, Interviewing, Rejected) and add notes, so they can easily monitor their progress and stay organized throughout their job search.",
+  "description": "Track My Application allows users to update the status of each job they've applied to.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlCkPkkvSSAiXw0B87e8KEYjALLWal6Fksmx0Y342tDhiGreQkX0ZX/CCnM9wunMtorZ7W8Q5dCu4OvByi+U8ez9HScdWuKqnU0FcJ4sp5twN+4MkwgnU072lEx8sOMqUq6E/aszd+uVaHLyfo0AFzRWSFX7TxPremMJPVi5m41dQGmjdFJ9Ljb1UW9qf38X53VFUA5zLZgf46R4kQAN7e2sNr830QoVyKTRwtP8RyZ/pDgwlmLCNLlh7GwFCBIRTNDMR1J8LT7iEnl5nCzI3qTBIlsKPwanK0oOVYxpSIRmJEpLm/w44qfsm4/KIJ0qZIfLXxYpYjC9nPZylGCyHTQIDAQAB",
+  "oauth2": {
+    "client_id": "847763334252-uuug0s9d4mm6ngumg07jsnsm2p0md6cs.apps.googleusercontent.com",
+    "scopes": [""]
+  },
   "action": {
     "default_popup": "track.html",
     "default_icon": "images/application-128.png"

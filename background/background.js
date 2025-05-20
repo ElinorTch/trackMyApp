@@ -1,3 +1,7 @@
+chrome.action.onClicked.addListener(function () {
+  chrome.tabs.create({ url: 'index.html' });
+});
+
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (tab.url && tab.url.includes("linkedin.com")) {
     const queryParameters = tab.url.split("?")[1];
