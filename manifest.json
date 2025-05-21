@@ -9,8 +9,7 @@
     "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
   },
   "action": {
-    "default_popup": "track.html",
-    "default_title": "FriendBlock, friends face's in a block."
+    "default_popup": "track.html"
   },
   "content_scripts": [
     {
@@ -31,8 +30,5 @@
     "https://www.googleapis.com/*",
     "https://accounts.google.com/*"
   ],
-  "permissions": ["scripting", "tabs", "activeTab", "identity"],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self';"
-  }
+  "permissions": ["scripting", "tabs", "activeTab", "identity"]
 }

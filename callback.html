@@ -1,0 +1,25 @@
+<!-- callback.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Connexion réussie</title>
+    <script>
+      window.onload = () => {
+        const token = new URL(window.location.href).hash.split("token=")[1];
+        if (token) {
+          // Stocke dans le local storage ou chrome.storage
+          localStorage.setItem("google_token", token);
+          chrome.storage.local.set({ token }, () => {
+            console.log("Token enregistré :", token);
+            window.close(); // ferme la page de callback
+          });
+        } else {
+          console.error("Aucun token trouvé.");
+        }
+      };
+    </script>
+  </head>
+  <body>
+    Connexion...
+  </body>
+</html>
